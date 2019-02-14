@@ -1,0 +1,52 @@
+.button-flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 1rem;
+    font-size: 1.15rem;
+    background: white;
+    color: black;
+    -webkit-transition: 0.3s; /* For Safari 3.1 to 6.0 */
+  transition:  0.3s;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
+
+.opacity-flex-container {
+    display: flex;
+    justify-content: center;
+} 
+
+.slider {
+    width: 80%;
+}
+
+.img-flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+grayscale{
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+blur {
+    filter: blur(5px);
+}
+
+hue {
+    filter:hue-rotate(90deg);
+}
+
+sepia {
+    filter:sepia(100%);
+}
+
+
+
