@@ -7,19 +7,84 @@
 </head>
 <body>
     <div class="img-flex-container">
-    <img src="van.jpg" alt="Foto van Van">
+    <img src="van.jpg" alt="Foto van Van" id="img-van">
 </div>
     <div class="button-flex-container">
     <button id="normal" type="button" >NORMAL</button>
     <button id="grayscale" type="button" >GRAYSCALE</button>
-    <button id="speia" type="button" >SEPIA</button>
+    <button id="sepia" type="button" >SEPIA</button>
     <button id="hue" type="button" >HUE</button>
     <button id="blur" type="button" >BLUR</button>
 </div>
 <div class="opacity-flex-container">
 OPACITY :
-    <input type="range" min="1" max="100" value="100" class="slider">
-100%
+    <input type="range" min="1" max="100" value="100"  id="slider">
 </div>
+
+<script>
+    let img = document.querySelector('#img-van');
+    document.getElementById('slider').addEventListener('change', function() {
+  
+  /* switch (document.getElementById('slider').value) {
+       case 0 : img.classList.add('opacity00'); break;
+       default:img.classList.add('opacity100');break;
+   }
+
+   
+    if (document.getElementById('slider').value = "0") img.classList.add('opacity00');
+    if (document.getElementById('slider').value = "10") img.classList.add('opacity10');
+    if (document.getElementById('slider').value = "20") img.classList.add('opacity20');
+    if (document.getElementById('slider').value = "30") img.classList.add('opacity30');
+    if (document.getElementById('slider').value = "40") img.classList.add('opacity40');
+    if (document.getElementById('slider').value = "50") img.classList.add('opacity50');
+    if (document.getElementById('slider').value = "60") img.classList.add('opacity60');
+    if (document.getElementById('slider').value = "70") img.classList.add('opacity70');
+    if (document.getElementById('slider').value = "80") img.classList.add('opacity80');
+    if (document.getElementById('slider').value = "90") img.classList.add('opacity90');
+    if (document.getElementById('slider').value = "100") img.classList.add('opacity100');
+*/
+});
+
+    let btnnormal = document.querySelector('#normal');
+btnnormal.addEventListener('click', function() {
+    img.classList.remove('sepia');
+    img.classList.remove('hue');
+    img.classList.remove('blur');
+    img.classList.remove('grayscale');
+});
+
+let btngrayscale = document.querySelector('#grayscale');
+btngrayscale.addEventListener('click', function() {
+    img.classList.remove('sepia');
+    img.classList.remove('hue');
+    img.classList.remove('blur');
+    img.classList.add('grayscale');
+});
+
+
+let btnsepia = document.querySelector('#sepia');
+btnsepia.addEventListener('click', function() {
+    img.classList.remove('grayscale');
+    img.classList.remove('hue');
+    img.classList.remove('blur');
+  img.classList.add('sepia');
+});  
+
+let btnhue = document.querySelector('#hue');
+btnhue.addEventListener('click', function() {
+    img.classList.remove('grayscale');
+    img.classList.remove('sepia');
+    img.classList.remove('blur');
+  img.classList.add('hue');
+});  
+
+let btnblur = document.querySelector('#blur');
+btnblur.addEventListener('click', function() {
+    img.classList.remove('grayscale');
+    img.classList.remove('hue');
+    img.classList.remove('sepia');
+  img.classList.add('blur');
+});  
+</script>
 </body>
 </html>
