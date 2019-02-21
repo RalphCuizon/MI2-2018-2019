@@ -17,63 +17,16 @@
     <button id="blur" type="button" >BLUR</button>
 </div>
 <div class="opacity-flex-container">
-OPACITY :
-    <input type="range" min="1" max="100" value="100"  id="range"  oninput="change_Opacity">
+<p>OPACITY :</p>
+    <input type="range" min="0" max="100" value="100" step="1" id="range">
+<p><span id="value"></span></p>
 </div>
 
-<script>
-    let img = document.querySelector('#img-van');
-     let range = document.getElementById('range');
-
-    function change_Opacity(){
-        var val = range.value;
-
-        img.style.filter = "opacity(" + val + ")";
-
-        img.innerHTML =   val + "%";
-    };
-
-   /* let btnnormal = document.querySelector('#normal');
-btnnormal.addEventListener('click', function() {
-    img.classList.remove('sepia');
-    img.classList.remove('hue');
-    img.classList.remove('blur');
-    img.classList.remove('grayscale');
-});*/
-
-let btngrayscale = document.querySelector('#grayscale');
-btngrayscale.addEventListener('click', function() {
-    img.classList.remove('sepia');
-    img.classList.remove('hue');
-    img.classList.remove('blur');
-    img.classList.add('grayscale');
-});
-
-
-let btnsepia = document.querySelector('#sepia');
-btnsepia.addEventListener('click', function() {
-    img.classList.remove('grayscale');
-    img.classList.remove('hue');
-    img.classList.remove('blur');
-  img.classList.add('sepia');
-});  
-
-let btnhue = document.querySelector('#hue');
-btnhue.addEventListener('click', function() {
-    img.classList.remove('grayscale');
-    img.classList.remove('sepia');
-    img.classList.remove('blur');
-  img.classList.add('hue');
-});  
-
-let btnblur = document.querySelector('#blur');
-btnblur.addEventListener('click', function() {
-    img.classList.remove('grayscale');
-    img.classList.remove('hue');
-    img.classList.remove('sepia');
-  img.classList.add('blur');
-});  
-</script>
-<script src=""
+<script src="js/js-range.js"></script>
+<script src="js/js-normal.js"></script>
+<script src="js/js.blur.js"></script>
+<script src="js/js-hue.js"></script>
+<script src="js/js-sepia.js"></script>
+<script src="js/js-grayscale.js"></script>
 </body>
 </html>

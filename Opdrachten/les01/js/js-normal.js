@@ -1,4 +1,4 @@
-let img = document.querySelector('#img-van');
+
 let btnnormal = document.querySelector('#normal');
 btnnormal.addEventListener('click', function() {
     img.classList.remove('sepia');

@@ -1,8 +1,3 @@
-.button-flex-container {
-    display: flex;
-    justify-content: center;
-}
-
 button {
     margin: 1rem;
     font-size: 1.15rem;
@@ -17,19 +12,18 @@ button:hover {
     color: white;
 }
 
-.opacity-flex-container {
+.opacity-flex-container, .button-flex-container, .img-flex-container {
     display: flex;
     justify-content: center;
 } 
 
-.slider {
-    width: 80%;
+#range {
+    width: 70%;
 }
 
 #img-van.grayscale {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-    
 }
 
 #img-van.blur {
