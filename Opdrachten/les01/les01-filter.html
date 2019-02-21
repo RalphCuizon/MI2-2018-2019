@@ -18,40 +18,28 @@
 </div>
 <div class="opacity-flex-container">
 OPACITY :
-    <input type="range" min="1" max="100" value="100"  id="slider">
+    <input type="range" min="1" max="100" value="100"  id="range"  oninput="change_Opacity">
 </div>
 
 <script>
     let img = document.querySelector('#img-van');
-    document.getElementById('slider').addEventListener('change', function() {
-  
-  /* switch (document.getElementById('slider').value) {
-       case 0 : img.classList.add('opacity00'); break;
-       default:img.classList.add('opacity100');break;
-   }
+     let range = document.getElementById('range');
 
-   
-    if (document.getElementById('slider').value = "0") img.classList.add('opacity00');
-    if (document.getElementById('slider').value = "10") img.classList.add('opacity10');
-    if (document.getElementById('slider').value = "20") img.classList.add('opacity20');
-    if (document.getElementById('slider').value = "30") img.classList.add('opacity30');
-    if (document.getElementById('slider').value = "40") img.classList.add('opacity40');
-    if (document.getElementById('slider').value = "50") img.classList.add('opacity50');
-    if (document.getElementById('slider').value = "60") img.classList.add('opacity60');
-    if (document.getElementById('slider').value = "70") img.classList.add('opacity70');
-    if (document.getElementById('slider').value = "80") img.classList.add('opacity80');
-    if (document.getElementById('slider').value = "90") img.classList.add('opacity90');
-    if (document.getElementById('slider').value = "100") img.classList.add('opacity100');
-*/
-});
+    function change_Opacity(){
+        var val = range.value;
 
-    let btnnormal = document.querySelector('#normal');
+        img.style.filter = "opacity(" + val + ")";
+
+        img.innerHTML =   val + "%";
+    };
+
+   /* let btnnormal = document.querySelector('#normal');
 btnnormal.addEventListener('click', function() {
     img.classList.remove('sepia');
     img.classList.remove('hue');
     img.classList.remove('blur');
     img.classList.remove('grayscale');
-});
+});*/
 
 let btngrayscale = document.querySelector('#grayscale');
 btngrayscale.addEventListener('click', function() {
@@ -86,5 +74,6 @@ btnblur.addEventListener('click', function() {
   img.classList.add('blur');
 });  
 </script>
+<script src="C:\Users\ralph.cuizon\Documents\GitHub\MI2-2018-2019\Opdrachten\js\les01\js-normal.js"> </script>
 </body>
 </html>
