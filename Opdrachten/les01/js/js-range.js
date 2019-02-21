@@ -8,6 +8,8 @@ let img = document.querySelector('#img-van');
         // =   val + "%";
     });
 
-    range.oninput = function(){
-        document.getElementById("value").innerHTML = this.value + "%";
-    }
+    /*range.oninput = function(){
+        document.getElementById("value").innerHTML = this.value + "%";}*/
+    range.addEventListener('change', function(){
+        document.getElementById("value").innerHTML = this.value + "%";})
+    
