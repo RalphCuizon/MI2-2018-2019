@@ -87,6 +87,11 @@ body {
     right: 10px;
     top: -5px;
     width: 45rem;
+    transition: 0.5s;
+}
+
+.loginmodal--verborgen {
+    transform: translateY(-100%);
 }
 
 .modal__title {
