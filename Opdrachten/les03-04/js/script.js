@@ -106,7 +106,7 @@
                 document.querySelector('.main__thumbs .active').classList.remove('active');
                 thumb.classList.add('active');
 
-                caption.innerHTML = thumb.getAttribute(img.alt);
+                caption.innerHTML = thumb.getAttribute('data-caption');
             });
         }
 
