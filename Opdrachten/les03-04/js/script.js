@@ -84,6 +84,32 @@
                     console.log("form contains errors");
                 }
             });
+
+        // aliases
+        let thumbs = document.querySelectorAll('.main__thumbs figure');
+        let large = document.querySelector('#large__figure');
+        let photo = large.querySelector('img');
+        let caption = large.querySelector('.large__title');
+
+        // attach click events to thumbnails
+        for (let i = 0; i < thumbs.length; i++) {
+            let thumb = thumbs[i];
+            let link = thumb.querySelector('a');
+            let img = thumb.querySelector('img');
+            link.addEventListener('click', function (e) {
+                // prevent default link action
+                e.preventDefault();
+                // show image
+                photo.src = link.href;
+                photo.alt = img.alt;
+                // change active state
+                document.querySelector('.main__thumbs .active').classList.remove('active');
+                thumb.classList.add('active');
+
+                caption.innerHTML = thumb.getAttribute(img.alt);
+            });
+        }
+
     });
 
 })();
