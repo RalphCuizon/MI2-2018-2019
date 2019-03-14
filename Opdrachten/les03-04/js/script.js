@@ -115,16 +115,42 @@
         document.getElementById('selAlbum').addEventListener('change',function (e) {
             filters.albumId = e.target.value;
             
+            let setImage = true;
 
             for(let i = 0; i <thumbs.length; i++) {
-                /*if(filters.albumId == '-1') {
+                if(filters.albumId == '-1') {
+                    if (setImage) {
+                        setImage = false;
+                        // grotere foto
+                        photo.src = thumbs[i].querySelector('a').href;
+                        photo.alt = thumbs[i].querySelector('img').alt;
+                        thumbs[i].classList.add('active');
+
+                        caption.innerHTML = thumbs[i].getAttribute('data-caption');
+                    } else {
+                        thumbs[i].classList.remove('active');
+                    }
                     thumbs[i].style.display = "block";
-                  }*/
-                if (filters.albumId == thumbs[i].getAttribute('data-albumId')) {
-                    thumbs[i].style.display = "block";
-                  } else {
-                    thumbs[i].style.display = "none";
-                  }
+                }
+                else{
+                    if (filters.albumId == thumbs[i].getAttribute('data-albumId')) {
+                        if (setImage) {
+                            setImage = false;
+                            // grotere foto
+                            photo.src = thumbs[i].querySelector('a').href;
+                            photo.alt = thumbs[i].querySelector('img').alt;
+                            thumbs[i].classList.add('active');
+
+                            caption.innerHTML = thumbs[i].getAttribute('data-caption');
+                        } else {
+                            thumbs[i].classList.remove('active');
+                        }
+                        thumbs[i].style.display = "block";
+                      } else {
+                        thumbs[i].style.display = "none";
+                      }
+                }
+                
             }
         });
 
