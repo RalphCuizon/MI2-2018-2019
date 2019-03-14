@@ -117,6 +117,9 @@
             
 
             for(let i = 0; i <thumbs.length; i++) {
+                /*if(filters.albumId == '-1') {
+                    thumbs[i].style.display = "block";
+                  }*/
                 if (filters.albumId == thumbs[i].getAttribute('data-albumId')) {
                     thumbs[i].style.display = "block";
                   } else {
