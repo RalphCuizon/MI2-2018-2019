@@ -109,6 +109,21 @@
                 caption.innerHTML = thumb.getAttribute('data-caption');
             });
         }
+        /* Filters met de album */
+
+        let filters = {albumId:'-1', years:{'2016':true,'2017':true,'2018':true}}; 
+        document.getElementById('selAlbum').addEventListener('change',function (e) {
+            filters.albumId = e.target.value;
+            
+
+            for(let i = 0; i <thumbs.length; i++) {
+                if (filters.albumId == thumbs[i].getAttribute('data-albumId')) {
+                    thumbs[i].style.display = "block";
+                  } else {
+                    thumbs[i].style.display = "none";
+                  }
+            }
+        });
 
     });
 

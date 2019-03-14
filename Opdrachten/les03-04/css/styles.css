@@ -214,6 +214,11 @@ main {
     width: calc(100% - 15rem);
 }
 
+/* little pictures */
+ a:hover , .active {
+    opacity: 0.5;
+}
+
 /* thumbs */
 
 .main__thumbs {
