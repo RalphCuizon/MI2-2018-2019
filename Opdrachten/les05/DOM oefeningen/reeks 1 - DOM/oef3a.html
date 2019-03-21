@@ -34,7 +34,14 @@
 			'//bitmatters.be/o/img/photo3-m.jpg',
 			'//bitmatters.be/o/img/photo20-m.jpg'
 		];
-		// your code here...
+		window.addEventListener('load', function () {
+			document.getElementById("btnRandom").addEventListener("click", function () {
+				
+				let randomNmr = Math.floor(Math.random()*photos.length);
+				document.getElementById("imgBig").src = photos[randomNmr];
+				
+			});
+		});
 	</script>
 </body>
 </html>
