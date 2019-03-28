@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>Custom properties example</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<p><button id="btnRefresh">Show random dog image</button></p>	
+	<p><img id="img"></p>
+<script>
+	let url = 'https://dog.ceo/api/breeds/image/random';
+	let img = document.querySelector('#img');
+
+	function handleError(err) {
+	    console.log('Request failed', err)
+	}
+	function handleResponse(resp) {
+	  console.log('response status: ', resp.status);
+	  return resp.json();
+	}
+	function handleSuccess(data) {
+
+	  console.log('status: ', data.status);
+	  console.log('image received: ', data.message);
+	  img.src = data.message;
+	}
+
+	document.querySelector('#btnRefresh').addEventListener('click', function() {
+		fetch(url)
+			.then(handleResponse)
+			.then(handleSuccess)
+			.catch(handleError);
+
+	});
+</script>
+</body>
+</html>
