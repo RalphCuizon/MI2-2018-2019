@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Reeks 2 oef3</title>
-	<meta charset="utf-8" />
-	<style>
-		/* general styles */
-		body { font-family: Arial; font-size: 14px; max-width: 600px; }
-		* { box-sizing: border-box; }
-		.assignment { margin-bottom: 20px; color: #4F81BD; }
-		.assignment ul, .assignment ol { padding-left: 15px; }
-		/* specific styles */
-		img { max-width: 100%; }
-	</style>
-</head>
-<body>
-	<div class="assignment">
-		<p>Opdracht</p>
-		<ol>
-			<li>toon de vorige/volgende foto als toets links/toets rechts ingedrukt wordt</li>
-		</ol>
-	</div>
-	<img src="//bitmatters.be/o/img/photo6-m.jpg" alt="" id="imgBig">
-			
-	<script>
-		let photos = [
-			'//bitmatters.be/o/img/photo1-m.jpg',
-			'//bitmatters.be/o/img/photo17-m.jpg',
-			'//bitmatters.be/o/img/photo6-m.jpg',
-			'//bitmatters.be/o/img/photo12-m.jpg',
-			'//bitmatters.be/o/img/photo3-m.jpg',
-			'//bitmatters.be/o/img/photo20-m.jpg'
-		];
-		let i = 2;
-		window.addEventListener('load', function () {
+  <head>
+    <title>Reeks 2 oef3</title>
+    <meta charset="utf-8" />
+    <style>
+      /* general styles */
+      body {
+        font-family: Arial;
+        font-size: 14px;
+        max-width: 600px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .assignment {
+        margin-bottom: 20px;
+        color: #4f81bd;
+      }
+      .assignment ul,
+      .assignment ol {
+        padding-left: 15px;
+      }
+      /* specific styles */
+      img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="assignment">
+      <p>Opdracht</p>
+      <ol>
+        <li>
+          toon de vorige/volgende foto als toets links/toets rechts ingedrukt
+          wordt
+        </li>
+      </ol>
+    </div>
+    <img
+      src="//bitmatters.be/o/img/photo6-m.jpg"
+      onclick="click(event)"
+      alt=""
+      id="imgBig"
+    />
 
-			function toonPhoto() {
-				document.getElementById("imgBig").src = photos[i];}
-		});
-	</script>
-</body>
+    <script>
+      let photos = [
+        "//bitmatters.be/o/img/photo1-m.jpg",
+        "//bitmatters.be/o/img/photo17-m.jpg",
+        "//bitmatters.be/o/img/photo6-m.jpg",
+        "//bitmatters.be/o/img/photo12-m.jpg",
+        "//bitmatters.be/o/img/photo3-m.jpg",
+        "//bitmatters.be/o/img/photo20-m.jpg"
+      ];
+      let i = 2;
+      window.addEventListener("load", function() {
+      //function toonPhoto() {
+      //document.getElementById("imgBig").src = photos[i];
+      //}
+
+      document.onmousedown = click;
+      function click(event) {
+        if (event.button == 0) {
+          i++;
+          document.getElementById("imgBig").src = photos[i];
+          if (i == 5) {
+            i = -1;
+          }
+        }
+        if (event.button == 2) {
+          i--;
+          document.getElementById("imgBig").src = photos[i];
+          if (i == 0) {
+            i = 6;
+          }
+        }
+      }
+      });
+    </script>
+  </body>
 </html>
