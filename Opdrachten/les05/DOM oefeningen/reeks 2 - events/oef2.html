@@ -46,7 +46,9 @@
         function myFunction(site, lien) {
           let str = "link";
           let result = str.link(lien);
-          document.getElementById("msg").textContent = site + " (" + result + ")";
+          
+          document.getElementById("msg").innerHTML = site + " (" + result + ")";
+
         };
 
 				
