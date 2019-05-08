@@ -1,73 +1,195 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Reeks 4 oef1a</title>
-	<meta charset="utf-8" />
-	<style>
-		/* general styles */
-		body { font-family: Arial; font-size: 14px; max-width: 600px; }
-		* { box-sizing: border-box; }
-		.assignment { margin-bottom: 20px; color: #4F81BD; }
-		.assignment ul, .assignment ol { padding-left: 15px; }
-		/* specific styles */
-		button, input[type=button] { border: 1px solid; background-color: #ccc; cursor: pointer } 
-		button:hover, input[type=button]:hover { background-color: #ddd; } 
-		button { margin: 20px 0}
-		.filters { max-width: 300px; }
-		.label { margin: 0; }
-		input[type=text], input[type=email] { width: 100%; }
-		input[type=text], input[type=email], select, .radiolist { display: block;  margin: 5px 0 15px 0; }
-		.categories { display: flex; }
-		.categories label { margin-right: 15px; }
-		.styles label { display: block; }
-		.summary p { margin: 0; }
-	</style>
-</head>
-<body>
-	<div class="assignment">
-		<p>Opdracht (<a href="//bitmatters.be/o/ss/reeks4-1.webp">voorbeeld</a>)</p>
-		<ol>
-			<li>als op de 'wissen' knop geklikt wordt: wis alle velden</li>
-			<li>als op de 'instellen' knop geklikt wordt: toon een samenvatting van de ingestelde waarden</li>
-		</ol>
-	</div>
-	<div class="filters">
-		<h3>Filters</h3>
-		<label for="inpSearch">Trefwoord</label>
-		<input type="text" id="inpSearch">
-		<label for="selType">Type</label>
-		<select id="selType">
-			<option value="-1">selecteer...</option>
-			<option value="sch">schoenen</option>
-			<option value="kld">kledij</option>
-			<option value="acc">accessoires</option>
-		</select>
-		<p class="label">Categorie</p>
-		<div class="radiolist categories">
-			<label><input type="radio" name="category" value="mannen"> mannen</label>
-			<label><input type="radio" name="category" value="vrouwen"> vrouwen</label>
-			<label><input type="radio" name="category" value="kinderen"> kinderen</label>
-		</div>
-		<p class="label">Stijl</p>
-		<div class="checkboxlist styles">
-			<label><input type="checkbox" value="gekleed"> gekleed</label>
-			<label><input type="checkbox" value="casual"> casual</label>
-			<label><input type="checkbox" value="urban"> urban</label>
-			<label><input type="checkbox" value="retro"> retro</label>
-			<label><input type="checkbox" value="klassiek"> klassiek</label>
-		</div>
-		<button id="btnFilter">instellen</button>
-		<button id="btnClear">wissen</button>
-	</div>
-	<div class="summary">
-		<h3>Overzicht filterinstellingen</h3>
-		<p id="pSearch">Zoekterm: <span>(leeg)</span></p>
-		<p id="pType">Type: <span>(geen gekozen)</span></p>
-		<p id="pCategory">Categorie: <span>(geen geselecteerd)</span></p>
-		<p id="pStyles">Stijlen: <span>(geen geselecteerd)</span></p>
-	</div>
-	<script>
-		// your code here...
-	</script>
-</body>
+  <head>
+    <title>Reeks 4 oef1a</title>
+    <meta charset="utf-8" />
+    <style>
+      /* general styles */
+      body {
+        font-family: Arial;
+        font-size: 14px;
+        max-width: 600px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .assignment {
+        margin-bottom: 20px;
+        color: #4f81bd;
+      }
+      .assignment ul,
+      .assignment ol {
+        padding-left: 15px;
+      }
+      /* specific styles */
+      button,
+      input[type="button"] {
+        border: 1px solid;
+        background-color: #ccc;
+        cursor: pointer;
+      }
+      button:hover,
+      input[type="button"]:hover {
+        background-color: #ddd;
+      }
+      button {
+        margin: 20px 0;
+      }
+      .filters {
+        max-width: 300px;
+      }
+      .label {
+        margin: 0;
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+      }
+      input[type="text"],
+      input[type="email"],
+      select,
+      .radiolist {
+        display: block;
+        margin: 5px 0 15px 0;
+      }
+      .categories {
+        display: flex;
+      }
+      .categories label {
+        margin-right: 15px;
+      }
+      .styles label {
+        display: block;
+      }
+      .summary p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="assignment">
+      <p>
+        Opdracht (<a href="//bitmatters.be/o/ss/reeks4-1.webp">voorbeeld</a>)
+      </p>
+      <ol>
+        <li>als op de 'wissen' knop geklikt wordt: wis alle velden</li>
+        <li>
+          als op de 'instellen' knop geklikt wordt: toon een samenvatting van de
+          ingestelde waarden
+        </li>
+      </ol>
+    </div>
+    <div class="filters">
+      <h3>Filters</h3>
+      <label for="inpSearch">Trefwoord</label>
+      <input type="text" id="inpSearch" />
+      <label for="selType">Type</label>
+      <select id="selType">
+        <option value="-1">selecteer...</option>
+        <option value="sch">schoenen</option>
+        <option value="kld">kledij</option>
+        <option value="acc">accessoires</option>
+      </select>
+      <p class="label">Categorie</p>
+      <div class="radiolist categories">
+        <label
+          ><input type="radio" name="category" value="mannen" id="mannen" />
+          mannen</label
+        >
+        <label
+          ><input type="radio" name="category" value="vrouwen" id="vrouwen" />
+          vrouwen</label
+        >
+        <label
+          ><input type="radio" name="category" value="kinderen" id="kinderen" />
+          kinderen</label
+        >
+      </div>
+      <p class="label">Stijl</p>
+      <div class="checkboxlist styles">
+        <label
+          ><input type="checkbox" value="gekleed" id="gekleed" /> gekleed</label
+        >
+        <label
+          ><input type="checkbox" value="casual" id="casual" /> casual</label
+        >
+        <label><input type="checkbox" value="urban" id="urban" /> urban</label>
+        <label><input type="checkbox" value="retro" id="retro" /> retro</label>
+        <label
+          ><input type="checkbox" value="klassiek" id="klassiek" />
+          klassiek</label
+        >
+      </div>
+      <button id="btnFilter">instellen</button>
+      <button id="btnClear">wissen</button>
+    </div>
+    <div class="summary">
+      <h3>Overzicht filterinstellingen</h3>
+      <p >Zoekterm: <span id="pSearch">(leeg)</span></p>
+      <p >Type: <span id="pType">(geen gekozen)</span></p>
+      <p >Categorie: <span id="pCategory">(geen geselecteerd)</span></p>
+      <p >Stijlen: <span id="pStyles">(geen geselecteerd)</span></p>
+    </div>
+    <script>
+      window.addEventListener("load", function() {
+        document
+          .getElementById("btnClear")
+          .addEventListener("click", function() {
+            document.getElementById("inpSearch").value = "";
+            document.getElementById("selType").value = "-1";
+            document.getElementById("mannen").checked = false;
+            document.getElementById("vrouwen").checked = false;
+            document.getElementById("kinderen").checked = false;
+            document.getElementById("gekleed").checked = false;
+            document.getElementById("casual").checked = false;
+            document.getElementById("urban").checked = false;
+            document.getElementById("retro").checked = false;
+            document.getElementById("klassiek").checked = false;
+          });
+
+        document
+          .getElementById("btnFilter")
+          .addEventListener("click", function() {
+            document.getElementById("pSearch").innerText =
+              document.getElementById("inpSearch").value;
+            if (document.getElementById("selType").value == "sch") {
+              document.getElementById("pType").innerText =
+                "schoenen ";
+			}
+			if (document.getElementById("selType").value == "kld") {
+              document.getElementById("pType").innerText =
+                "kledij ";
+			}
+			if (document.getElementById("selType").value == "acc") {
+              document.getElementById("pType").innerText =
+                "accessoire ";
+			}
+			if (document.getElementById("mannen").checked == true) {
+				document.getElementById("pCategory").innerText = document.getElementById("mannen").value;
+			}
+			if (document.getElementById("vrouwen").checked == true) {
+				document.getElementById("pCategory").innerText =document.getElementById("vrouwen").value;
+			}
+			if (document.getElementById("kinderen").checked == true) {
+				document.getElementById("pCategory").innerText = document.getElementById("kinderen").value;
+			}
+			if (document.getElementById("gekleed").checked == true) {
+				document.getElementById("pStyles").innerText += ", " + document.getElementById("gekleed").value;
+			}
+			if (document.getElementById("casual").checked == true) {
+				document.getElementById("pStyles").innerText += ", " + document.getElementById("casual").value;
+			}
+			if (document.getElementById("urban").checked == true) {
+				document.getElementById("pStyles").innerText += ", " + document.getElementById("urban").value;
+			}
+			if (document.getElementById("retro").checked == true) {
+				document.getElementById("pStyles").innerText += ", " + document.getElementById("retro").value;
+			}
+			if (document.getElementById("klassiek").checked == true) {
+				document.getElementById("pStyles").innerText += ", " + document.getElementById("klassiek").value;
+			}
+          });
+      });
+    </script>
+  </body>
 </html>
