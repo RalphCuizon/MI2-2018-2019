@@ -66,7 +66,15 @@
 		<p id="pStyles">Stijlen: <span>(geen geselecteerd)</span></p>
 	</div>
 	<script>
-		// your code here...
+		window.addEventListener("load", function() {
+			document.getElementById("btnClear").addEventListener("click", function(){
+				document.getElementById("frm1").reset();
+			});
+
+			document.getElementById("btnFilter").addEventListener("click", function(){
+				document.getElementById("frm1").submit();
+			});
+		});
 	</script>
 </body>
 </html>
