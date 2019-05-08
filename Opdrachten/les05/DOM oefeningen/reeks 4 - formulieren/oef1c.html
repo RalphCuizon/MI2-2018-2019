@@ -42,18 +42,34 @@
 			<option value="acc">accessoires</option>
 		</select>
 		<p class="label">Categorie</p>
-		<div class="radiolist categories">
-			<label><input type="radio" name="category" value="mannen"> mannen</label>
-			<label><input type="radio" name="category" value="vrouwen"> vrouwen</label>
-			<label><input type="radio" name="category" value="kinderen"> kinderen</label>
+		<div class="radiolist">
+			<label
+          ><input type="radio" name="category" value="mannen" id="mannen" />
+          mannen</label
+        >
+        <label
+          ><input type="radio" name="category" value="vrouwen" id="vrouwen" />
+          vrouwen</label
+        >
+        <label
+          ><input type="radio" name="category" value="kinderen" id="kinderen" />
+          kinderen</label
+        >
 		</div>
 		<p class="label">Stijl</p>
-		<div class="checkboxlist styles">
-			<label><input type="checkbox" value="gekleed"> gekleed</label>
-			<label><input type="checkbox" value="casual"> casual</label>
-			<label><input type="checkbox" value="urban"> urban</label>
-			<label><input type="checkbox" value="retro"> retro</label>
-			<label><input type="checkbox" value="klassiek"> klassiek</label>
+		<div class="checkboxlist">
+			<label
+          ><input type="checkbox" value="gekleed" id="gekleed" /> gekleed</label
+        >
+        <label
+          ><input type="checkbox" value="casual" id="casual" /> casual</label
+        >
+        <label><input type="checkbox" value="urban" id="urban" /> urban</label>
+        <label><input type="checkbox" value="retro" id="retro" /> retro</label>
+        <label
+          ><input type="checkbox" value="klassiek" id="klassiek" />
+          klassiek</label
+        >
 		</div>
 	</div>
 	<div class="summary">
@@ -64,7 +80,53 @@
 		<p id="pStyles">Stijlen: <span>(geen geselecteerd)</span></p>
 	</div>
 	<script>
-		// your code here...
+	window.addEventListener("load", function() {
+		document.getElementById("inpSearch").addEventListener("keyup", function () {
+			document.querySelector("#pSearch span").innerHTML = document.getElementById("inpSearch").value;
+		});
+		document.getElementById("selType").addEventListener("change", function () {
+		if (document.getElementById("selType").value == "sch") {
+              document.querySelector("#pType span").innerText =
+                "schoenen ";
+			}
+			if (document.getElementById("selType").value == "kld") {
+              document.querySelector("#pType span").innerText =
+                "kledij ";
+			}
+			if (document.getElementById("selType").value == "acc") {
+              document.querySelector("#pType span").innerText =
+                "accessoire ";
+			}
+		});
+		document.getElementById("mannen").addEventListener("change", function () {
+			
+				document.querySelector("#pCategory span").innerText = document.getElementById("mannen").value;
+			});
+
+		document.getElementById("vrouwen").addEventListener("change", function () {
+				document.querySelector("#pCategory span").innerText =document.getElementById("vrouwen").value;
+			});
+			document.getElementById("kinderen").addEventListener("change", function () {
+				document.querySelector("#pCategory span").innerText = document.getElementById("kinderen").value;
+			});
+
+			document.getElementById("gekleed").addEventListener("change", function () {
+				document.querySelector("#pStyles span").innerText += ", " + document.getElementById("gekleed").value;
+			});
+			document.getElementById("casual").addEventListener("change", function () {
+				document.querySelector("#pStyles span").innerText += ", " + document.getElementById("casual").value;
+			});
+			document.getElementById("urban").addEventListener("change", function () {
+				document.querySelector("#pStyles span").innerText += ", " + document.getElementById("urban").value;
+			});
+			document.getElementById("retro").addEventListener("change", function () {
+				document.querySelector("#pStyles span").innerText += ", " + document.getElementById("retro").value;
+			});
+			document.getElementById("klassiek").addEventListener("change", function () {
+				document.querySelector("#pStyles span").innerText += ", " + document.getElementById("klassiek").value;
+			});
+		});
+	
 	</script>
 </body>
 </html>
