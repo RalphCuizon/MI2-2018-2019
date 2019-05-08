@@ -35,7 +35,9 @@
       .present3 {
         width: 80px;
       }
-      .gift {
+      .gift1,
+      .gift2,
+      .gift3 {
         opacity: 0;
         width: 1px;
         position: absolute;
@@ -43,10 +45,11 @@
         left: 40px;
         transition: all 1s;
       }
-      .gift .show {
-        left: -20px;
+      .gift1 .show {
+        left: -30px;
         width: 120px;
         opacity: 1;
+        
       }
     </style>
   </head>
@@ -71,7 +74,7 @@
           alt="present"
           class="present1"
         />
-        <img src="//bitmatters.be/o/icn/gift1.jpg" alt="gift1" class="gift" />
+        <img src="//bitmatters.be/o/icn/gift1.jpg" alt="gift1" class="gift1" />
       </div>
       <div class="item">
         <img
@@ -79,7 +82,7 @@
           alt="present"
           class="present2"
         />
-        <img src="//bitmatters.be/o/icn/gift2.jpg" alt="gift2" class="gift" />
+        <img src="//bitmatters.be/o/icn/gift2.jpg" alt="gift2" class="gift2" />
       </div>
       <div class="item">
         <img
@@ -87,46 +90,55 @@
           alt="present"
           class="present3"
         />
-        <img src="//bitmatters.be/o/icn/gift3.jpg" alt="gift3" class="gift" />
+        <img src="//bitmatters.be/o/icn/gift3.jpg" alt="gift3" class="gift3" />
       </div>
     </div>
     <p id="zz"></p>
     <script>
       window.addEventListener("load", function() {
         document
-          .querySelector(".present1")
+          .querySelector(".wrapper .item .present1")
           .addEventListener("click", function() {
-			document
-		  .querySelector(".gift").classList.remove("gift");
-		  document
-		  .querySelector(".gift").classList.add(".gift");
-		  document
-		  .querySelector(".gift").classList.add(".show");
-            document.getElementById("zz").innerHTML = "000000000000";
+            this.src="//bitmatters.be/o/icn/box-open.png";
+            document
+              .querySelector(".wrapper .item .gift1")
+              .classList.remove("gift1");
+            document
+              .querySelector(".wrapper .item .gift1")
+              .classList.add(".gift");
+            document
+              .querySelector(".wrapper .item .gift1")
+              .classList.add("show");
           });
 
         document
-          .querySelector(".present2")
+          .querySelector(".wrapper .item .present2")
           .addEventListener("click", function() {
-			document
-		  .querySelector(".gift").classList.remove("gift");
-		  document
-		  .querySelector(".gift").classList.add(".gift");
-		  document
-		  .querySelector(".gift").classList.add(".show");
-            document.getElementById("zz").innerHTML = "11111111111";
+            this.src="//bitmatters.be/o/icn/box-open.png";
+            document
+              .querySelector(".wrapper .item .gift2")
+              .classList.remove("gift2");
+            document
+              .querySelector(".wrapper .item .gift2")
+              .classList.add(".gift");
+            document
+              .querySelector(".wrapper .item .gift2")
+              .classList.add(".show");
           });
 
         document
-          .querySelector(".present3")
+          .querySelector(".wrapper .item .present3")
           .addEventListener("click", function() {
-			document
-		  .querySelector(".gift").classList.remove("gift");
-		  document
-		  .querySelector(".gift").classList.add(".gift");
-		  document
-		  .querySelector(".gift").classList.add(".show");
-            document.getElementById("zz").innerHTML = "2222222222222";
+            this.src="//bitmatters.be/o/icn/box-open.png";
+            document
+              .querySelector(".wrapper .item .gift3")
+              .classList.remove("gift3");
+            document
+              .querySelector(".wrapper .item .gift3")
+              .classList.add(".gift");
+            document
+              .querySelector(".wrapper .item .gift3")
+              .classList.add(".show");
           });
       });
     </script>
