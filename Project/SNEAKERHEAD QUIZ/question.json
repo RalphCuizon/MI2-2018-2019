@@ -1,0 +1,106 @@
+[
+    {
+        "question": "What is the nickname of this Air Yeezy 2?",
+        "choice": {
+            "1": "Red October",
+            "2": "Red November",
+            "3": "Red December",
+            "4": "Red September"
+        },
+        "answer":"1"
+    },
+
+    {
+        "question": "What is the number of this shoe, Yeezy Boost … “Turtle Dove”?",
+        "choice": {
+            "1": "750",
+            "2": "350",
+            "3": "700",
+            "4": "500"
+        },
+        "answer":"2"
+    },
+
+    {
+        "question": "How many Air Jordan 11 Retro “Concord” did Jordan Brand sold in the late 2018?",
+        "choice": {
+            "1": "5 million",
+            "2": "6 million",
+            "3": "500 hundred",
+            "4": "1 million"
+        },
+        "answer":"4"
+    },
+
+    {
+        "question": "When was the very first Jordan released?",
+        
+        "answer":"1985"
+    },
+
+    {
+        "question": "For what sport was the Nike Air Force 1 made?",
+        "choice": {
+            "1": "Tennis",
+            "2": "Basketball",
+            "3": "Volleyball",
+            "4": "Football"
+        },
+        "answer":"2"
+    },
+
+    {
+        "question": "For what ‘Day’ was this released?",
+        "choice": {
+            "1": "Nike Day",
+            "2": "Adidas Day",
+            "3": "Air Max Day",
+            "4": "Air Force Day"
+        },
+        "answer":"3"
+    },
+
+    {
+        "question": "Which company did Jordan collaborate to make this Jordan 5?",
+        "choice": {
+            "1": "Palace",
+            "2": "COMME Des Garçons",
+            "3": "Supreme",
+            "4": "North Face"
+        },
+        "answer":"3"
+    },
+
+    {
+        "question": "Who designed the Off-White X Nike?",
+        "choice": {
+            "1": "Don-C",
+            "2": "Kanye West",
+            "3": "Travis Scott",
+            "4": "Virgil Abloh"
+        },
+        "answer":"4"
+    },
+
+    {
+        "question": "What technology did Kanye West use for the Adidas sole?",
+        "choice": {
+            "1": "Air",
+            "2": "Boost",
+            "3": "Gel",
+            "4": "React"
+        },
+        "answer":"2"
+    },
+
+    {
+        "question": "For which artist was this shoes made?",
+        "choice": {
+            "1": "Travis Scott",
+            "2": "DJ Khaled",
+            "3": "JT",
+            "4": "Mark Wahlberg"
+        },
+        "answer":"1"
+    }
+]
