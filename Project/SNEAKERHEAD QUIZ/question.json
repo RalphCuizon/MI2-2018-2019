@@ -2,14 +2,28 @@
     {
         "question": "What is the nickname of this Air Yeezy 2?",
         "choice": {
-            "1": "Red October",
-            "2": "Red November",
-            "3": "Red December",
-            "4": "Red September"
+            "a": "Red October",
+            "b": "Red November",
+            "c": "Red December",
+            "d": "Red September"
         },
-        "answer":"1"
+        "answer":"a"
     },
 
+    {
+        "question": "What is the number of this shoe, Yeezy Boost … “Turtle Dove”?",
+        "answers": [{"answer": "750","juist":true},
+            {"answer": "350","juist":false},
+            {"answer": "700","juist":false},
+            {"answer": "500","juist":false}
+        ],
+        "type":"MCSA"
+    },
+    {
+        "question": "Wat is mijn naam?",
+        "answers": [{"answer": "Ralph","juist":true}],
+        "type":"open"
+    },
     {
         "question": "What is the number of this shoe, Yeezy Boost … “Turtle Dove”?",
         "choice": {

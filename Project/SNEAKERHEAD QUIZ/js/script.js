@@ -7,6 +7,9 @@ xhr.addEventListener("readystatechange", function() {
     for (var i = 0; i < question.length; i += 1) {
       qList += '<li class="vraag">';
       qList += question[i].question + "<br>";
+      qList += '<input type="radio">';
+      qList += question[i].choice["a"] + "<br>";
+      
       qList += "</li>";
       
     }
