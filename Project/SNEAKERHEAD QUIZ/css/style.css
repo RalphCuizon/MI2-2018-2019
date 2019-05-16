@@ -1,3 +1,10 @@
 body {
     background-color: black;
 }
+.vraag {
+    color: white
+  }
+
+.question {
+    list-style: none;
+}
