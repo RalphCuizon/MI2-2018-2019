@@ -1,120 +1,94 @@
 [
     {
         "question": "What is the nickname of this Air Yeezy 2?",
-        "choice": {
-            "a": "Red October",
-            "b": "Red November",
-            "c": "Red December",
-            "d": "Red September"
-        },
-        "answer":"a"
+        "answers": [{"answer": "Red October","juist":true},
+            {"answer": "Red November","juist":false},
+            {"answer": "Red December","juist":false},
+            {"answer": "Red September","juist":false}
+        ],
+        "type":"MCSA"
     },
-
     {
         "question": "What is the number of this shoe, Yeezy Boost … “Turtle Dove”?",
-        "answers": [{"answer": "750","juist":true},
-            {"answer": "350","juist":false},
+        "answers": [{"answer": "750","juist":false},
+            {"answer": "350","juist":true},
             {"answer": "700","juist":false},
             {"answer": "500","juist":false}
         ],
         "type":"MCSA"
     },
     {
-        "question": "Wat is mijn naam?",
-        "answers": [{"answer": "Ralph","juist":true}],
-        "type":"open"
-    },
-    {
-        "question": "What is the number of this shoe, Yeezy Boost … “Turtle Dove”?",
-        "choice": {
-            "1": "750",
-            "2": "350",
-            "3": "700",
-            "4": "500"
-        },
-        "answer":"2"
-    },
-
-    {
         "question": "How many Air Jordan 11 Retro “Concord” did Jordan Brand sold in the late 2018?",
-        "choice": {
-            "1": "5 million",
-            "2": "6 million",
-            "3": "500 hundred",
-            "4": "1 million"
-        },
-        "answer":"4"
+        "answers": [{"answer": "5 million","juist":false},
+            {"answer": "6 million","juist":false},
+            {"answer": "500 hundred","juist":false},
+            {"answer": "1 million","juist":true}
+        ],
+        "type":"MCSA"
     },
-
     {
         "question": "When was the very first Jordan released?",
-        
-        "answer":"1985"
+        "answers": [{"answer": "1985","juist":true}],
+        "type":"open"
     },
 
     {
         "question": "For what sport was the Nike Air Force 1 made?",
-        "choice": {
-            "1": "Tennis",
-            "2": "Basketball",
-            "3": "Volleyball",
-            "4": "Football"
-        },
-        "answer":"2"
+        "answers": [{"answer": "Tennis","juist":false},
+            {"answer": "Basketball","juist":true},
+            {"answer": "Volleyball","juist":false},
+            {"answer": "Footbal","juist":false}
+        ],
+        "type":"MCSA"
     },
 
     {
         "question": "For what ‘Day’ was this released?",
-        "choice": {
-            "1": "Nike Day",
-            "2": "Adidas Day",
-            "3": "Air Max Day",
-            "4": "Air Force Day"
-        },
-        "answer":"3"
+        "answers": [{"answer": "Nike Day","juist":false},
+            {"answer": "Adidas Day","juist":false},
+            {"answer": "Air Max Day","juist":true},
+            {"answer": "Air Force Day","juist":false}
+        ],
+        "type":"MCSA"
     },
 
     {
         "question": "Which company did Jordan collaborate to make this Jordan 5?",
-        "choice": {
-            "1": "Palace",
-            "2": "COMME Des Garçons",
-            "3": "Supreme",
-            "4": "North Face"
-        },
-        "answer":"3"
+        "answers": [{"answer": "Palace","juist":false},
+            {"answer": "COMME Des Garçons","juist":false},
+            {"answer": "Supreme","juist":true},
+            {"answer": "North Face","juist":false}
+        ],
+        "type":"MCSA"
     },
 
     {
         "question": "Who designed the Off-White X Nike?",
-        "choice": {
-            "1": "Don-C",
-            "2": "Kanye West",
-            "3": "Travis Scott",
-            "4": "Virgil Abloh"
-        },
-        "answer":"4"
+        "answers": [{"answer": "Palace","juist":false},
+            {"answer": "COMME Des Garçons","juist":false},
+            {"answer": "Supreme","juist":true},
+            {"answer": "North Face","juist":false}
+        ],
+        "type":"MCSA"
     },
 
     {
         "question": "What technology did Kanye West use for the Adidas sole?",
-        "choice": {
-            "1": "Air",
-            "2": "Boost",
-            "3": "Gel",
-            "4": "React"
-        },
-        "answer":"2"
+        "answers": [{"answer": "Air","juist":false},
+            {"answer": "Boost","juist":true},
+            {"answer": "Gel","juist":false},
+            {"answer": "React","juist":false}
+        ],
+        "type":"MCSA"
     },
 
     {
         "question": "For which artist was this shoes made?",
-        "choice": {
-            "1": "Travis Scott",
-            "2": "DJ Khaled",
-            "3": "JT",
-            "4": "Mark Wahlberg"
-        },
-        "answer":"1"
+        "answers": [{"answer": "Travis Scott","juist":true},
+            {"answer": "DJ Khaled","juist":false},
+            {"answer": "JT","juist":false},
+            {"answer": "Mark Wahlberg","juist":false}
+        ],
+        "type":"MCSA"
     }
 ]
