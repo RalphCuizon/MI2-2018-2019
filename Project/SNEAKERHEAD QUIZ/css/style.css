@@ -1,10 +1,16 @@
 body {
     background-color: black;
 }
-.vraag {
-    color: white
-  }
 
-.question {
+#questions {
+    background-color: white;
+    color: black;
+}
+.vraag {
     list-style: none;
+}
+
+#imgBig {
+    width: 100px;
+    height: 100px;
 }
