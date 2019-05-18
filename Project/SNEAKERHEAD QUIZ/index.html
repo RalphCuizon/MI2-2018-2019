@@ -8,12 +8,19 @@
   </head>
   <body>
     <div>
-			<img src="/Project/SNEAKERHEAD QUIZ/img/home.jpg" id="imgBig" />
+      <img src="/Project/SNEAKERHEAD QUIZ/img/home.jpg" id="imgBig" />
+      <button id="btnNext">Next</button>
+      <button id="btnPrevious">Previous</button>
       <div id="questions">
         
       </div>
     </div>
+    <script src="vendor/jquery-3.4.1.js"></script>
 
     <script src="js/script.js"></script>
+    <script>function hideQuestion() {
+      $("#question").hide("slow");
+    }
+    $("#btnPrevious").click(hideQuestion);</script>
   </body>
 </html>

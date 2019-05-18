@@ -45,4 +45,13 @@ window.addEventListener("load", function() {
   });
 
   xhr.send();
+
+  /*function hideQuestion() {
+    $("#question").hide("slow");
+  }
+  $("#btnPrevious").click(hideQuestion);
+  /*function showQuestion() {
+    $("#question:first").show("slow");
+  }
+  $("btnNext").click(showQuestion);*/
 });
