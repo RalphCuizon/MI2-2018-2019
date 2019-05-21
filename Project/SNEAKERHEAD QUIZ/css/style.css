@@ -2,13 +2,22 @@ body {
     background-color: black;
 }
 
-#questions {
+#slide {
     background-color: white;
     color: black;
 }
-.vraag {
+.question {
     list-style: none;
+    display: none;
+    
 }
+
+#currentQuestion {
+    display: block;
+    
+    
+}
+
 
 #imgBig {
     width: 100px;
