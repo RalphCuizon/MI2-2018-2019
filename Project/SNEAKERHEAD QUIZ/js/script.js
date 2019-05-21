@@ -17,7 +17,8 @@ let photos = [
   i = 0,
   score = 0,
   antwoordVier,
-  timer = 15;
+  timer = 15,
+  myTimer;
 
 //Wat er gebeurt wnr de pagina wordt geladen
 window.addEventListener("load", function() {
@@ -29,6 +30,7 @@ window.addEventListener("load", function() {
     createButton();
     showPhoto();
     createScore();
+    createTimer();
     showTimer();
   });
 
@@ -38,6 +40,8 @@ window.addEventListener("load", function() {
     showScore();
     showQuestion();
     showPhoto();
+    clearTimer();
+    showTimer();
   });
 });
 
@@ -113,9 +117,12 @@ function checkAnswer() {
 function createScore() {
   $("#score").show();
   document.getElementById("score").innerHTML = score + "/10";
-  $("#timer").show();
 }
 
+//Creër een timer
+function createTimer() {
+  $("#timer").show();
+}
 //Toon score
 function showScore() {
   document.getElementById("score").innerHTML = score + "/10";
@@ -123,9 +130,18 @@ function showScore() {
 
 //Toon timer
 function showTimer() {
-  
-  setInterval(function() {
-    document.getElementById("timer").innerHTML = "00:" +timer;
+  myTimer = setInterval(function() {
+    if (timer >= 10) {
+      document.getElementById("timer").innerHTML = "00:" + timer;
+    } else {
+      document.getElementById("timer").innerHTML = "00:0" + timer;
+    }
     timer--;
-  }, 1000);
+  }, 750);
+}
+
+//Stop timer
+function clearTimer() {
+  clearInterval(myTimer);
+  timer = "15";
 }
