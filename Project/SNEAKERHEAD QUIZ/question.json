@@ -64,10 +64,10 @@
 
     {
         "question": "Who designed the Off-White X Nike?",
-        "answers": [{"answer": "Palace","right":false},
-            {"answer": "COMME Des Garçons","right":false},
-            {"answer": "Supreme","right":true},
-            {"answer": "North Face","right":false}
+        "answers": [{"answer": "Kanye West","right":false},
+            {"answer": "Don-C","right":false},
+            {"answer": "Virgil Abloh","right":true},
+            {"answer": "Jerry Lorenzo","right":false}
         ],
         "type":"MCSA"
     },

@@ -1,25 +1,27 @@
 body {
-    background-color: black;
+  background-color: black;
 }
 
 #slide {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 .question {
-    list-style: none;
-    display: none;
-    
+  list-style: none;
+  display: none;
 }
 
 #currentQuestion {
-    display: block;
-    
-    
+  display: block;
 }
 
+#btnNext,
+#score,
+#timer {
+  display: none;
+}
 
 #imgBig {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
