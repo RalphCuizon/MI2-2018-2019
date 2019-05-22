@@ -1,5 +1,6 @@
 body {
   background-color: black;
+   
 }
 
 #slide {
@@ -8,6 +9,16 @@ body {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center; 
+  font-family: "Impact", Charcoal, sans-serif;
+  justify-content: space-between;
+}
+
+#slide > * {
+  padding: 10px;
+
 }
 .question {
   list-style: none;
@@ -25,9 +36,23 @@ body {
 }
 
 #imgBig {
-  display: block;
+  display: flex;
   width: 400px;
   height: 400px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#btnStar,
+#btnHowTo {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (min-width: 800px) {
+  #imgBig    { flex: 3 0px; }
+  #btnStart { order: 1; } 
+  #btnHowTo    { order: 2; }
 }
