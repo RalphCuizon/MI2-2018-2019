@@ -17,9 +17,11 @@ let photos = [
   i = 0,
   score = 0,
   antwoordVier,
-  timer = 15,
+  timer = 5,
   myTimer,
-  oldScore = score;
+  oldScore = score,
+  text = document.createElement("H1"),
+  showText = document.createTextNode("Time's Out!");
 
 //Wat er gebeurt wnr de pagina wordt geladen
 window.addEventListener("load", function() {
@@ -137,10 +139,32 @@ function showScore() {
   document.getElementById("score").innerHTML = score + "/10";
   if (oldScore != score) {
     document.getElementById("score").style.color = "green";
+   showText = document.createTextNode("RIGHT!");
+   text.appendChild(showText);
+      document.body.appendChild(text);
+      setTimeout(function() {
+        showText.nodeValue="";
+      }, 1000);
+  } else {
+    document.getElementById("score").style.color = "red";
+    showText = document.createTextNode("WRONG!");
+   text.appendChild(showText);;
+      document.body.appendChild(text);
+      setTimeout(function() {
+        showText.nodeValue="";
+      }, 1000);
+  }
+  oldScore = score;
+}
+
+// Toon score zonder heading
+function showScoreAfterTimeOut() {
+document.getElementById("score").innerHTML = score + "/10";
+  if (oldScore != score) {
+    document.getElementById("score").style.color = "green";
   } else {
     document.getElementById("score").style.color = "red";
   }
-
   oldScore = score;
 }
 
@@ -156,20 +180,18 @@ function showTimer() {
 
     if (timer == "-1") {
       clearInterval(myTimer);
-      var h = document.createElement("H1");
-      var showText = document.createTextNode("Time's Out!");
-      h.appendChild(showText);
-      document.body.appendChild(h);
       checkAnswer();
-      showScore();
+      showScoreAfterTimeOut()
       showQuestion();
       showPhoto();
       clearTimer();
       showTimer();
+      showText = document.createTextNode("Time's Out!");
+      text.appendChild(showText);
+      document.body.appendChild(text);
       setTimeout(function() {
         showText.nodeValue="";
       }, 1000);
-      
     }
   }, 750);
 }
@@ -179,3 +201,4 @@ function clearTimer() {
   clearInterval(myTimer);
   timer = "15";
 }
+

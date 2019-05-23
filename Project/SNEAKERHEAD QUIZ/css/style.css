@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family: "Impact", Charcoal, sans-serif;
 }
 
 button {
@@ -30,7 +31,7 @@ button:hover {
   display: flex;  
   flex-direction: column;
   /*text-align: center; */
-  font-family: "Impact", Charcoal, sans-serif;
+  
   align-content: center;
 }
 
@@ -70,9 +71,16 @@ button:hover {
  
 }
 
-@media all and (min-width: 800px) {
-
+@media all and (max-width: 800px) {
+  .slide {
+    width: 95%;
+  }
 }
 h1 {
   color: white;
+  text-align: center;
+}
+
+p {
+  padding-left: 2%;
 }
