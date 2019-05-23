@@ -18,10 +18,12 @@ let photos = [
   score = 0,
   antwoordVier,
   timer = 15,
-  myTimer;
+  myTimer,
+  oldScore = score;
 
 //Wat er gebeurt wnr de pagina wordt geladen
 window.addEventListener("load", function() {
+  hideQuestions();
   createQuestion();
 
   //Wat er gebeurt bij het clicken van btnStart
@@ -81,6 +83,8 @@ function createQuestion() {
 
 // Het tonen van vragen
 function showQuestion() {
+  $("#questions").show();
+
   if (i > 0) {
     var x = i - 1;
     document.querySelectorAll(".question")[x].removeAttribute("id");
@@ -119,6 +123,11 @@ function createScore() {
   document.getElementById("score").innerHTML = score + "/10";
 }
 
+//Hide de div questions
+function hideQuestions() {
+  $("#questions").hide();
+}
+
 //Creër een timer
 function createTimer() {
   $("#timer").show();
@@ -126,17 +135,42 @@ function createTimer() {
 //Toon score
 function showScore() {
   document.getElementById("score").innerHTML = score + "/10";
+  if (oldScore != score) {
+    document.getElementById("score").style.color = "green";
+  } else {
+    document.getElementById("score").style.color = "red";
+  }
+
+  oldScore = score;
 }
 
 //Toon timer
 function showTimer() {
   myTimer = setInterval(function() {
-    if (timer >= 10) {
+    if (timer >= "10") {
       document.getElementById("timer").innerHTML = "00:" + timer;
     } else {
       document.getElementById("timer").innerHTML = "00:0" + timer;
     }
     timer--;
+
+    if (timer == "-1") {
+      clearInterval(myTimer);
+      var h = document.createElement("H1");
+      var showText = document.createTextNode("Time's Out!");
+      h.appendChild(showText);
+      document.body.appendChild(h);
+      checkAnswer();
+      showScore();
+      showQuestion();
+      showPhoto();
+      clearTimer();
+      showTimer();
+      setTimeout(function() {
+        showText.nodeValue="";
+      }, 1000);
+      
+    }
   }, 750);
 }
 
