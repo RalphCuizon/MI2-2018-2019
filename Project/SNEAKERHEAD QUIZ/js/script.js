@@ -72,8 +72,9 @@ window.addEventListener("load", function () {
 
     if(clickNext== "10") {
       if (score >= "7") {
-        self.location = "";
+        self.location = "https://ralphcuizon.github.io/ThreeJs/win";
       } else {
+        self.location = "https://ralphcuizon.github.io/ThreeJs/lose";
 
       }
     }
